@@ -1,1 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Lab // 3291design</title>
+    
+    <!-- Unified Studio Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Smooch+Sans:wght@300;600;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Global Brand Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            background-color: #11161b; /* Deep slate-navy background */
+            color: #f8f9fa;
+            font-family: 'Orbitron', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Cross-Domain Global Navbar Mirror */
+        .studio-nav {
+            background-color: #1a2229;
+            padding: 18px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .nav-logo {
+            font-size: 1.1rem;
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .nav-logo span {
+            color: #ff6b35; /* Signature Orange */
+        }
+
+        .back-hub-btn {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #a0aec0;
+            text-decoration: none;
+            border: 1px solid rgba(160, 174, 192, 0.3);
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .back-hub-btn:hover {
+            color: #ffffff;
+            border-color: #ff6b35;
+            background-color: rgba(255, 107, 53, 0.05);
+        }
+
+        /* The Structural Baseline Accent */
+        .nav-accent-line {
+            height: 3px;
+            background-color: #ff6b35;
+            width: 100%;
+            position: relative;
+            z-index: 9;
+        }
+
+        /* Main Industrial Showcase Window */
+        .content-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 5%;
+            position: relative;
+        }
+
+        .holding-box {
+            max-width: 650px;
+            width: 100%;
+            background: rgba(26, 34, 41, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-left: 5px solid #ff6b35; /* Our iconic permanent left pillar */
+            padding: 50px 40px;
+            border-radius: 0 12px 12px 0;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            text-align: left;
+        }
+
+        /* Typography Sculpting */
+        .project-tag {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 5px;
+            color: #ff6b35;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            line-height: 1;
+            color: #ffffff;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .artistic-subtitle {
+            font-family: 'Smooch Sans', sans-serif;
+            font-size: 2.8rem;
+            color: #a0aec0;
+            font-weight: 300;
+            line-height: 1;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        .description {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            line-height: 1.8;
+            letter-spacing: 1px;
+            color: #cbd5e0;
+            margin-bottom: 40px;
+        }
+
+        /* Status Pipeline Indicator */
+        .status-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 107, 53, 0.1);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            padding: 10px 20px;
+            border-radius: 30px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #ff6b35;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #ff6b35;
+            animation: pulse 2s infinite;
+        }
+
+        .status-text {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7); }
+            70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(255, 107, 53, 0); }
+            100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 107, 53, 0); }
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            .main-title { font-size: 2.5rem; }
+            .artistic-subtitle { font-size: 2.2rem; }
+            .holding-box { padding: 40px 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Global Brand Header -->
+    <nav class="studio-nav">
+        <a href="https://3291design.com" class="nav-logo">3291<span>DESIGN</span></a>
+        <a href="https://3291design.com" class="back-hub-btn">← Central Hub</a>
+    </nav>
+    <div class="nav-accent-line"></div>
+
+    <!-- Main Dynamic Zone -->
+    <main class="content-container">
+        <div class="holding-box">
+            <span class="project-tag">Development Sandbox</span>
+            <h1 class="main-title">Photo Lab</h1>
+            <div class="artistic-subtitle">visual archives & frame capture</div>
+            
+            <p class="description">
+                Deploying a high-performance visual cataloging engine designed to house original high-fidelity media, editorial layouts, and technical frame captures. System assets are currently transitioning out of staging.
+            </p>
+
+            <div class="status-pill">
+                <div class="status-dot"></div>
+                <span class="status-text">Staging Assets & Calibrating Layout</span>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
